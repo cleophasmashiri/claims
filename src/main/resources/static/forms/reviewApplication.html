@@ -1,0 +1,112 @@
+<h3>Create Loan Application</h3>
+<!--<script cam-script type="text/form-script">-->
+<!--camForm.on('submit', function(evt) {-->
+
+<!--var fileUpload = $('#passportDocument').get(0);-->
+
+<!--// prevent submit if user has not provided a file-->
+<!--evt.submitPrevented = (fileUpload.files.length == 0);-->
+
+<!--});-->
+<!--</script>-->
+<form role="form" class="form-horizontal">
+    <h4>Personal Details</h4>
+    <div class="control-group">
+        <label class="control-label">First Name</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="firstName"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Last Name</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="lastName"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Email Address</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="emailAddress"
+                   cam-variable-type="String"
+                   required
+                   ng-pattern="/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/"
+            />
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">ID Document</label>
+        <div class="controls">
+            <a cam-file-download="idDocument"></a>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Address line1</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="addressline1"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">City</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="addressCity"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">State</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="addressState"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Postal Code</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="addressPostalCode"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Loan Amount</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="purchasePrice"
+                   cam-variable-type="Double"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Approve? </label>
+        <div class="controls">
+            <input cam-variable-name="approved"
+                   cam-variable-type="Boolean"
+                   type="checkbox"
+                   name="approved"
+                   class="form-control" />
+        </div>
+    </div>
+</form>
