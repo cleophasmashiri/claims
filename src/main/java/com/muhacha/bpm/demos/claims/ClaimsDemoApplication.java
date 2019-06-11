@@ -1,4 +1,4 @@
-package com.muhacha.bpm.demos.springbootcamundademo;
+package com.muhacha.bpm.demos.claims;
 
 import org.camunda.bpm.engine.RuntimeService;
 import org.camunda.bpm.spring.boot.starter.annotation.EnableProcessApplication;
@@ -10,18 +10,18 @@ import org.springframework.context.event.EventListener;
 
 @SpringBootApplication
 @EnableProcessApplication
-public class SpringBootCamundaDemoApplication {
+public class ClaimsDemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBootCamundaDemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ClaimsDemoApplication.class, args);
+    }
 
-	@Autowired
-	private RuntimeService runtimeService;
+    @Autowired
+    private RuntimeService runtimeService;
 
-	@EventListener
-	private void processPostDeploy(PostDeployEvent event) {
-		runtimeService.startProcessInstanceByKey("loanRequest");
-	}
+    @EventListener
+    private void processPostDeploy(PostDeployEvent event) {
+        runtimeService.startProcessInstanceByKey("loanRequest");
+    }
 
 }

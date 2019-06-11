@@ -1,10 +1,11 @@
-package com.muhacha.bpm.demos.springbootcamundademo.delegates;
+package com.muhacha.bpm.demos.claims.delegates;
 
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
+import org.springframework.stereotype.Component;
 
-public class SendDeclinedEmail implements JavaDelegate {
-
+@Component
+public class SendApprovedEmail implements JavaDelegate {
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
 

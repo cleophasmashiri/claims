@@ -1,4 +1,4 @@
-package com.muhacha.bpm.demos.springbootcamundademo;
+package com.muhacha.bpm.demos.claims;
 
 import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.camunda.bpm.engine.test.Deployment;
@@ -17,7 +17,7 @@ import static org.camunda.bpm.engine.test.assertions.bpmn.AbstractAssertions.pro
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Deployment(resources = {"loanRequest.bpmn"})
-public class SpringBootCamundaDemoApplicationTests {
+public class ClaimsDemoApplicationTests {
 
 	@Test
 	public void givenCustomerSubmittedLoanRequestThatMeetsScoreThenApprovedNotificationIsSent() {
